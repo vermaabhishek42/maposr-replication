@@ -143,4 +143,13 @@ ggsave(
   dpi      = 300
 )
 
+ggsave(
+  filename = "outputs/figure2_replication.pdf",
+  plot     = fig2_plot,
+  width    = 10,
+  height   = 4
+)
 
+# save processed data used for Figure 2
+write_csv(clean_data, "outputs/figure2_clean_data.csv")
+write_csv(fig2_counts, "outputs/figure2_counts.csv")
