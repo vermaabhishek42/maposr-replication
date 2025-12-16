@@ -4,12 +4,13 @@ subtitle: "Replication of Figure 2 — Studies by Open Science Subfield (2000–
 author: "Abhishek Verma"
 format:
   revealjs:
+    embed-resources: true
     theme: white
     slide-number: true
     preview-links: auto
     code-fold: true
     code-overflow: wrap
-    chalkboard: true
+    chalkboard: false
 execute:
   message: false
   warning: false
