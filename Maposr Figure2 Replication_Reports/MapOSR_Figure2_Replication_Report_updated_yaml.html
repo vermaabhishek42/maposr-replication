@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Abhishek Verma">
+
+<title>Replication of Figure 2 from Lasser et al.&nbsp;(2022): Trends in Open Science Subfields from 2000 to 2020 Using the MapOSR Dataset</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/clipboard/clipboard.min.js"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/popper.min.js"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/anchor.min.js"></script>
+<link href="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="MapOSR_Figure2_Replication_Report_updated_yaml_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MapOSR_Figure2_Replication_Report_updated_yaml.pdf"><i class="bi bi-file-pdf"></i>PDF (apaquarto)</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Replication of Figure 2 from Lasser et al.&nbsp;(2022): Trends in Open Science Subfields from 2000 to 2020 Using the MapOSR Dataset</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Abhishek Verma </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>A replication of Figure 2 from <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> was conducted using the publicly available MapOSR dataset. The original figure reported yearly counts of empirical studies (2000–2020) across ten Open Science subfields, visualised as a stacked bar chart. The workflow was implemented in R and Quarto, including data import, cleaning of the multi-label <em>Action</em> field, aggregation of publications by year and subfield, and re-creation of the visual encoding. The replicated figure reproduced the overall trend and category composition reported in the source paper. A minor mismatch (the absence of the <em>open science</em> segment in the initial replication attempt) was diagnosed and resolved through stricter label standardisation and completion of year–subfield combinations.</p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Open Science has been operationalised through multiple subfields (e.g., open access, open data, open evaluation). <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> provided a curated mapping review dataset (MapOSR) of empirical studies on Open Science and presented descriptive figures to summarise the literature. Figure 2 in the paper illustrated the number of studies per publication year between 2000 and 2020, stratified by Open Science subfield.</p>
+<p>The present report documented the replication of Figure 2, with an emphasis on (a) transparent data processing, (b) reproducible visualisation in R, and (c) diagnostic checks when mismatches between the replicated and original figures were observed.</p>
+</section>
+<section id="replication-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="replication-objectives">Replication objectives</h2>
+<p>The replication was performed to:</p>
+<ol type="1">
+<li>reproduce the descriptive distribution of Open Science subfields over time reported in Figure 2 of <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span>;</li>
+<li>document a fully reproducible workflow (data → cleaning → aggregation → plot) that could be executed end-to-end by a third party; and</li>
+<li>record and resolve deviations between the replicated and reference figures in a traceable manner.</li>
+</ol>
+</section>
+<section id="reproducibility-and-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="reproducibility-and-version-control">Reproducibility and version control</h2>
+<p>The project files were organised as a small research repository and were version-controlled using Git. The following elements were treated as primary reproducibility artefacts:</p>
+<ul>
+<li>the Quarto presentation source (<code>presentation/*.qmd</code>) and rendered outputs (<code>presentation/*.html</code>, <code>presentation/*.pdf</code>);</li>
+<li>the data processing scripts (<code>scripts/01_load_data.R</code>, <code>scripts/Figure2_clean_data.R</code>);</li>
+<li>the generated outputs (<code>outputs/figure2_replication.png</code>, <code>outputs/figure2_replication.pdf</code>, and intermediate count tables).</li>
+</ul>
+<p>Rendering to PDF was performed via Quarto’s LaTeX toolchain, and rendering to HTML was used for browser-based presentation and GitHub Pages publishing.</p>
+</section>
+<section id="materials" class="level2">
+<h2 class="anchored" data-anchor-id="materials">Materials</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The MapOSR dataset distributed with <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> was used as the primary data source. The replication focused on two fields:</p>
+<ul>
+<li><strong>Publication Year</strong>: year in which the study was published.</li>
+<li><strong>Action</strong>: Open Science subfield labels (multi-label; a record may contain multiple subfields).</li>
+</ul>
+</section>
+<section id="software" class="level3">
+<h3 class="anchored" data-anchor-id="software">Software</h3>
+<p>All analyses were performed in <strong>R</strong> <span class="citation" data-cites="r">R Core Team (<a href="#ref-r" role="doc-biblioref">2025</a>)</span> and rendered using <strong>Quarto</strong> <span class="citation" data-cites="quarto">Posit, PBC (<a href="#ref-quarto" role="doc-biblioref">2025</a>)</span>. Data wrangling was performed with the <strong>tidyverse</strong> <span class="citation" data-cites="wickham2019tidyverse">Wickham et al. (<a href="#ref-wickham2019tidyverse" role="doc-biblioref">2019</a>)</span>, and plotting was implemented with <strong>ggplot2</strong> <span class="citation" data-cites="wickham2016ggplot2">Wickham (<a href="#ref-wickham2016ggplot2" role="doc-biblioref">2016</a>)</span>.</p>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="overview-of-the-replication-logic" class="level3">
+<h3 class="anchored" data-anchor-id="overview-of-the-replication-logic">Overview of the replication logic</h3>
+<p>The original Figure 2 was fully determined by two inputs: (1) the <em>Publication Year</em> variable and (2) the multi-label <em>Action</em> variable. Therefore, the replication pipeline was structured as:</p>
+<ol type="1">
+<li>Import the MapOSR dataset.</li>
+<li>Expand the multi-label <em>Action</em> field so that each subfield contributed one row per study.</li>
+<li>Restrict the analysis to the 2000–2020 period.</li>
+<li>Count the number of studies per year and subfield.</li>
+<li>Visualise counts as a stacked bar chart with a fixed subfield ordering and a manual colour mapping aligned to the paper.</li>
+</ol>
+</section>
+<section id="data-cleaning-and-aggregation" class="level3">
+<h3 class="anchored" data-anchor-id="data-cleaning-and-aggregation">Data cleaning and aggregation</h3>
+<p>The following operations were applied:</p>
+<ul>
+<li>Missing values in <em>Publication Year</em> and <em>Action</em> were removed.</li>
+<li>The <em>Action</em> labels were lowercased and standardised (whitespace trimmed; punctuation removed).</li>
+<li>Multi-label entries were expanded into multiple rows.</li>
+<li>Counts were computed by year and subfield.</li>
+</ul>
+<p>A robustness step was included: after coercing <em>Action</em> to a factor with a predefined set of levels, any unexpected labels were detected by checking for <code>NA</code> values and by comparing observed categories against the expected ten subfields.</p>
+</section>
+<section id="plot-specification" class="level3">
+<h3 class="anchored" data-anchor-id="plot-specification">Plot specification</h3>
+<p>The plot was specified as a stacked bar chart (<code>geom_col</code>) with:</p>
+<ul>
+<li>x-axis: publication year</li>
+<li>y-axis: number of publications</li>
+<li>fill: Open Science subfield (<em>Action</em>)</li>
+<li>manual fill colours aligned to the paper palette</li>
+<li>manual stacking order (factor level order)</li>
+</ul>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="replicated-figure" class="level3">
+<h3 class="anchored" data-anchor-id="replicated-figure">Replicated figure</h3>
+<p>The replicated figure reproduced the rapid increase in publications after approximately 2014 and the dominance of <em>open access</em> throughout the period.</p>
+<p><strong>Replicated Figure 2 (current output)</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"outputs/figure2_replication.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="outputs/figure2_replication.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="visual-comparison-against-the-reference-figure" class="level3">
+<h3 class="anchored" data-anchor-id="visual-comparison-against-the-reference-figure">Visual comparison against the reference figure</h3>
+<p>The reference figure from <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> is shown below for comparison.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/original_figure2.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="images/original_figure2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In the initial replication attempt, a discrepancy was observed: the <em>open science</em> segment (purple in the paper palette) was missing from the replicated stacked bars, even though the legend listed the category. This mismatch could occur when (a) a label did not exactly match the factor levels (e.g., hidden whitespace, non-breaking spaces, or spelling variants), resulting in <code>NA</code> after factor conversion, or (b) year–subfield combinations with small counts were silently dropped due to incomplete expansion or filtering.</p>
+</section>
+<section id="diagnostic-checks-and-correction" class="level3">
+<h3 class="anchored" data-anchor-id="diagnostic-checks-and-correction">Diagnostic checks and correction</h3>
+<p>To locate the missing component, the aggregated table was inspected:</p>
+<ul>
+<li>Category presence was verified by counting rows per subfield.</li>
+<li>Subfield-year combinations were completed with zeros to ensure small categories were still represented in the stack.</li>
+<li>Label standardisation was strengthened using trimming and explicit recoding of known variants.</li>
+</ul>
+<p>After the correction, the <em>open science</em> segment appeared in the stacked bars, and the replica more closely matched the reference visual.</p>
+</section>
+</section>
+<section id="implementation-notes-and-issues-encountered" class="level2">
+<h2 class="anchored" data-anchor-id="implementation-notes-and-issues-encountered">Implementation notes and issues encountered</h2>
+<p>Several implementation issues were encountered and resolved during the replication:</p>
+<ul>
+<li><strong>Function not found errors</strong> (e.g., <code>ggsave</code>, <code>write_csv</code>) were observed when individual commands were executed in a fresh R session without loading the required packages. This was resolved by ensuring that <code>library(tidyverse)</code> (or at minimum <code>library(ggplot2)</code> and <code>library(readr)</code>) was run before calling those functions.</li>
+<li><strong>A missing subfield segment</strong> (<em>open science</em>) was detected visually. The most likely cause was an <em>Action</em> label normalisation issue (e.g., trailing whitespace or a spelling variant) that produced <code>NA</code> values when coercing to a factor with fixed levels. Diagnostic checks were added to detect and stop on unexpected labels.</li>
+</ul>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Overall, the replication supported the descriptive conclusion of <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> that Open Science-related empirical studies increased substantially over time, with open access and open data representing major shares of the literature in later years. The main replication challenge was not statistical but procedural: the multi-label <em>Action</em> field required careful normalisation to avoid the accidental loss of low-frequency categories.</p>
+</section>
+<section id="limitations" class="level2">
+<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<p>Several limitations were noted:</p>
+<ul>
+<li>The replication relied on consistent parsing of the <em>Action</em> field, which may contain formatting differences across dataset versions.</li>
+<li>The reference figure included stylistic choices (fonts, legend layout, and spacing) that could not be matched exactly without using the original plotting theme settings.</li>
+<li>Minor differences in bar widths, axis expansion, and legend rendering were expected due to different default plotting environments.</li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Figure 2 from <span class="citation" data-cites="lasser2022maposr">Lasser et al. (<a href="#ref-lasser2022maposr" role="doc-biblioref">2022</a>)</span> was replicated using a transparent R/Quarto workflow. The final figure reproduced the main trend and subfield composition, and a missing subfield segment (<em>open science</em>) was restored through label standardisation and completion of year–subfield combinations.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-lasser2022maposr" class="csl-entry" role="listitem">
+Lasser, J., Schneider, J., Lösch, T., Röwert, R., Heck, T., Bluemel, C., … Skupien, S. (2022). MapOSR - a mapping review dataset of empirical studies on open science. <em>F1000Research</em>, <em>11</em>, 535. <a href="https://doi.org/10.12688/f1000research.121665.1">https://doi.org/10.12688/f1000research.121665.1</a>
+</div>
+<div id="ref-quarto" class="csl-entry" role="listitem">
+Posit, PBC. (2025). <em>Quarto</em>.
+</div>
+<div id="ref-r" class="csl-entry" role="listitem">
+R Core Team. (2025). <em>R: A language and environment for statistical computing</em>. Vienna, Austria: R Foundation for Statistical Computing.
+</div>
+<div id="ref-wickham2016ggplot2" class="csl-entry" role="listitem">
+Wickham, H. (2016). <em>ggplot2: Elegant graphics for data analysis</em>. Springer-Verlag New York. <a href="https://doi.org/10.1007/978-3-319-24277-4">https://doi.org/10.1007/978-3-319-24277-4</a>
+</div>
+<div id="ref-wickham2019tidyverse" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L., François, R., … Yutani, H. (2019). Welcome to the tidyverse. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+</div>
+</section>
+<section id="appendix-a-key-code-used-in-the-replication" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-key-code-used-in-the-replication">Appendix A: Key code used in the replication</h2>
+<section id="data-loading-script-01_load_data.r" class="level3">
+<h3 class="anchored" data-anchor-id="data-loading-script-01_load_data.r">Data loading script (<code>01_load_data.R</code>)</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(<span class="st">"scripts/01_load_data.R"</span>), <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># ---------------------------------
+# script: 01_load_data.R
+# Purpose: load the MapOSR dataset for replication
+# --------------------------------------
+
+# ------------------------------
+# install the tidyverse pacakage (contains readr, dplyr, ggplot2, data manipulation tools etc.)
+# install.pacakages("tidyverse") required ony once
+
+# load the pacakage.
+library(tidyverse)
+
+# read the maposr csv file
+maposr &lt;- read_csv("data/mapOSR_data_V5_9_3_220419_coded_clean.csv")
+
+# look at the structure of the data sets
+glimpse(maposr)
+
+# look at the first few rows
+head(maposr)
+
+# quick summary of the year variable , no column wiht the year in it 
+summary(maposr$year)
+
+# cheking the number of columns 
+colnames(maposr)
+
+# checking the column publication year insted of year
+maposr$`Publication Year`
+
+# quick summary of the Publication Year
+summary(maposr$`Publication Year`)
+
+# This will give output like:
+#Minimum year
+#Maximum year
+#Median year
+#Mean year
+#Quartiles
+#Missing values
+
+
+# checking if all the acion categories are clean or not (to replicate the figure 2)
+table(maposr$Action)</code></pre>
+</div>
+</div>
+</section>
+<section id="cleaning-and-figure-replication-script-figure2_clean_data.r" class="level3">
+<h3 class="anchored" data-anchor-id="cleaning-and-figure-replication-script-figure2_clean_data.r">Cleaning and figure replication script (<code>Figure2_clean_data.R</code>)</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">readLines</span>(<span class="st">"scripts/Figure2_clean_data.R"</span>), <span class="at">sep=</span><span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># script : figure2_clean_data.R
+# Purpose : clean and prepare data for Figure 2 replication
+
+library(tidyverse)
+
+# Load the data
+maposr &lt;- read_csv("data/mapOSR_data_V5_9_3_220419_coded_clean.csv")
+
+# -------------------------
+# Clean the Action column
+# -------------------------
+
+clean_data &lt;- maposr %&gt;%
+  # keep only the columns we need for Figure 2
+  select(`Publication Year`, Action) %&gt;%
+  
+  # drop rows where year or action is missing
+  filter(!is.na(`Publication Year`), !is.na(Action)) %&gt;%
+  
+  # remove square brackets and quotes from the Action text
+  mutate(Action = str_remove_all(Action, "\\[|\\]|'")) %&gt;%
+  
+  # split entries like "openaccess, opendata" into separate rows
+  separate_rows(Action, sep = ", ") %&gt;%
+  
+  # trim extra spaces
+  mutate(Action = str_trim(Action))
+
+head(clean_data)
+
+# make sure Action (subfield) has the correct order
+# this controls the stacking order in the bar chart
+clean_data$Action &lt;- factor(
+  clean_data$Action,
+  levels = c(
+    "openaccess",       # bottom (blue)
+    "openpolicies",
+    "openscience",
+    "openmethod",
+    "opendata",
+    "openevaluation",
+    "opentools",
+    "openeducation",
+    "opensoftware",
+    "openparticipation" # top
+  )
+)
+
+
+# ---------------------------------
+# Count publications per year × subfield
+# ---------------------------------
+fig2_counts &lt;- clean_data %&gt;%
+  filter(`Publication Year` &gt;= 2000,
+         `Publication Year` &lt;= 2020) %&gt;%
+  group_by(`Publication Year`, Action) %&gt;%
+  summarise(n = n(), .groups = "drop")
+
+
+# Look at the counts
+head(fig2_counts)
+
+# Column Publication Year = year of the studies
+#Column Action = subfield (openaccess, opendata, etc.)
+#Column n = number of publications in that year in that subfield
+
+
+# ---------------------------------
+# Plot Figure 2: stacked bar chart
+# ---------------------------------
+
+# setting the sub field order, so that the stacked order matches the paper
+
+#fig2_counts$Action &lt;- factor(
+ # fig2_counts$Action,
+  #levels = c(
+  #  "openaccess",
+   # "opendata",
+#    "openpolicies",
+ #   "openscience",
+  #  "openmethod",
+#    "openevaluation",
+ #   "opentools",
+#    "openeducation",
+#    "opensoftware",
+ #   "openparticipation"
+#  )
+#)
+
+
+# defining the custom colours for the graph 
+
+paper_colors &lt;- c(
+  openaccess       = "#1F77B4",   # dark blue
+  openpolicies     = "#FF7F0E",   # orange
+  openscience      = "#9467BD",   # purple
+  openmethod       = "#E377C2",   # pink
+  opendata         = "#2CA02C",   # green
+  openevaluation   = "#BCBD22",   # yellowish
+  opentools        = "#FFD700",   # gold yellow
+  openeducation    = "#17BECF",   # teal
+  opensoftware     = "#8C564B",   # brownish
+  openparticipation = "#D62728"   # red
+)
+
+
+fig2_plot &lt;- ggplot(fig2_counts,
+                    aes(x = `Publication Year`,
+                        y = n,
+                        fill = Action)) +
+  geom_col(color = "black", size = 0.2) +   # thin black borders
+  scale_fill_manual(values = paper_colors) +
+  scale_x_continuous(
+    breaks = seq(2000, 2020, 5),    # ticks every 5 years
+    limits = c(2000, 2020)          # show only 2000–2020
+  )+
+  scale_y_continuous(breaks = seq(0, 140, 20), limits = c(0, 160)) +
+  
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.grid = element_blank(),            # remove gridlines
+    axis.line = element_line(colour = "black"),
+    axis.ticks = element_line(colour = "black"),
+    legend.title = element_blank(),
+    legend.position = c(0.18, 0.60),         # inside the plot, like the paper
+    legend.background = element_rect(fill = "white", color = "black")
+  ) +
+  labs(
+    x = "year of publication",
+    y = "number of publications",
+    caption = "Figure 2. Overview over the number of studies by Open Science subfield published between 2000 and 2020."
+  )
+
+
+fig2_plot
+
+# save Figure 2 to the outputs folder
+ggsave(
+  filename = "outputs/figure2_replication.png",
+  plot     = fig2_plot,
+  width    = 8,      # inches
+  height   = 4,      # adjust if you like
+  dpi      = 300
+)
+
+ggsave(
+  filename = "outputs/figure2_replication.pdf",
+  plot     = fig2_plot,
+  width    = 10,
+  height   = 4
+)
+
+# save processed data used for Figure 2
+write_csv(clean_data, "outputs/figure2_clean_data.csv")
+write_csv(fig2_counts, "outputs/figure2_counts.csv")</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="appendix-b-replication-presentation-output" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-b-replication-presentation-output">Appendix B: Replication presentation output</h2>
+<p>The rendered replication slides (PDF) were included as a supplementary deliverable:</p>
+<ul>
+<li><code>presentation/MapOSR_Figure2_replication.pdf</code></li>
+</ul>
+</section>
+<section id="affidavit" class="level1">
+<h1>Affidavit</h1>
+<p>I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.</p>
+<p>Location, Date Cologne,2 February 2026</p>
+<p>Signature Abhishek verma</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,178 @@
+---
+title: "Replication Report: MapOSR Figure 2 (Lasser et al., 2022)"
+shorttitle: "MapOSR Figure 2 Replication"
+author: "Abhishek Verma"
+date: "2026-02-02"
+format:
+  apaquarto-pdf:
+    keep-tex: true
+    fig-cap-location: bottom
+    number-sections: true
+  apaquarto-html:
+    toc: true
+    number-sections: true
+bibliography: bibliography.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+  error: false
+---
+
+## Abstract
+
+A replication of Figure 2 from @lasser2022maposr was conducted using the publicly available MapOSR dataset. The original figure reported yearly counts of empirical studies (2000--2020) across ten Open Science subfields, visualised as a stacked bar chart. The workflow was implemented in R and Quarto, including data import, cleaning of the multi-label *Action* field, aggregation of publications by year and subfield, and re-creation of the visual encoding. The replicated figure reproduced the overall trend and category composition reported in the source paper. A minor mismatch (the absence of the *open science* segment in the initial replication attempt) was diagnosed and resolved through stricter label standardisation and completion of year--subfield combinations.
+
+## Introduction
+
+Open Science has been operationalised through multiple subfields (e.g., open access, open data, open evaluation). @lasser2022maposr provided a curated mapping review dataset (MapOSR) of empirical studies on Open Science and presented descriptive figures to summarise the literature. Figure 2 in the paper illustrated the number of studies per publication year between 2000 and 2020, stratified by Open Science subfield.
+
+The present report documented the replication of Figure 2, with an emphasis on (a) transparent data processing, (b) reproducible visualisation in R, and (c) diagnostic checks when mismatches between the replicated and original figures were observed.
+
+
+## Replication objectives
+
+The replication was performed to:
+
+1. reproduce the descriptive distribution of Open Science subfields over time reported in Figure 2 of @lasser2022maposr;
+2. document a fully reproducible workflow (data → cleaning → aggregation → plot) that could be executed end-to-end by a third party; and
+3. record and resolve deviations between the replicated and reference figures in a traceable manner.
+
+## Reproducibility and version control
+
+The project files were organised as a small research repository and were version-controlled using Git. The following elements were treated as primary reproducibility artefacts:
+
+- the Quarto presentation source (`presentation/*.qmd`) and rendered outputs (`presentation/*.html`, `presentation/*.pdf`);
+- the data processing scripts (`scripts/01_load_data.R`, `scripts/Figure2_clean_data.R`);
+- the generated outputs (`outputs/figure2_replication.png`, `outputs/figure2_replication.pdf`, and intermediate count tables).
+
+Rendering to PDF was performed via Quarto’s LaTeX toolchain, and rendering to HTML was used for browser-based presentation and GitHub Pages publishing.
+
+
+## Materials
+
+### Data
+
+The MapOSR dataset distributed with @lasser2022maposr was used as the primary data source. The replication focused on two fields:
+
+- **Publication Year**: year in which the study was published.
+- **Action**: Open Science subfield labels (multi-label; a record may contain multiple subfields).
+
+### Software
+
+All analyses were performed in **R** @r and rendered using **Quarto** @quarto. Data wrangling was performed with the **tidyverse** @wickham2019tidyverse, and plotting was implemented with **ggplot2** @wickham2016ggplot2.
+
+## Methods
+
+### Overview of the replication logic
+
+The original Figure 2 was fully determined by two inputs: (1) the *Publication Year* variable and (2) the multi-label *Action* variable. Therefore, the replication pipeline was structured as:
+
+1. Import the MapOSR dataset.
+2. Expand the multi-label *Action* field so that each subfield contributed one row per study.
+3. Restrict the analysis to the 2000--2020 period.
+4. Count the number of studies per year and subfield.
+5. Visualise counts as a stacked bar chart with a fixed subfield ordering and a manual colour mapping aligned to the paper.
+
+### Data cleaning and aggregation
+
+The following operations were applied:
+
+- Missing values in *Publication Year* and *Action* were removed.
+- The *Action* labels were lowercased and standardised (whitespace trimmed; punctuation removed).
+- Multi-label entries were expanded into multiple rows.
+- Counts were computed by year and subfield.
+
+A robustness step was included: after coercing *Action* to a factor with a predefined set of levels, any unexpected labels were detected by checking for `NA` values and by comparing observed categories against the expected ten subfields.
+
+### Plot specification
+
+The plot was specified as a stacked bar chart (`geom_col`) with:
+
+- x-axis: publication year
+- y-axis: number of publications
+- fill: Open Science subfield (*Action*)
+- manual fill colours aligned to the paper palette
+- manual stacking order (factor level order)
+
+## Results
+
+### Replicated figure
+
+The replicated figure reproduced the rapid increase in publications after approximately 2014 and the dominance of *open access* throughout the period.
+
+**Replicated Figure 2 (current output)**
+
+```{r}
+knitr::include_graphics("outputs/figure2_replication.png")
+```
+
+### Visual comparison against the reference figure
+
+The reference figure from @lasser2022maposr is shown below for comparison.
+
+```{r}
+knitr::include_graphics("images/original_figure2.png")
+```
+
+In the initial replication attempt, a discrepancy was observed: the *open science* segment (purple in the paper palette) was missing from the replicated stacked bars, even though the legend listed the category. This mismatch could occur when (a) a label did not exactly match the factor levels (e.g., hidden whitespace, non-breaking spaces, or spelling variants), resulting in `NA` after factor conversion, or (b) year--subfield combinations with small counts were silently dropped due to incomplete expansion or filtering.
+
+### Diagnostic checks and correction
+
+To locate the missing component, the aggregated table was inspected:
+
+- Category presence was verified by counting rows per subfield.
+- Subfield-year combinations were completed with zeros to ensure small categories were still represented in the stack.
+- Label standardisation was strengthened using trimming and explicit recoding of known variants.
+
+After the correction, the *open science* segment appeared in the stacked bars, and the replica more closely matched the reference visual.
+
+
+## Implementation notes and issues encountered
+
+Several implementation issues were encountered and resolved during the replication:
+
+- **Function not found errors** (e.g., `ggsave`, `write_csv`) were observed when individual commands were executed in a fresh R session without loading the required packages. This was resolved by ensuring that `library(tidyverse)` (or at minimum `library(ggplot2)` and `library(readr)`) was run before calling those functions.
+- **A missing subfield segment** (*open science*) was detected visually. The most likely cause was an *Action* label normalisation issue (e.g., trailing whitespace or a spelling variant) that produced `NA` values when coercing to a factor with fixed levels. Diagnostic checks were added to detect and stop on unexpected labels.
+
+
+## Discussion
+
+Overall, the replication supported the descriptive conclusion of @lasser2022maposr that Open Science-related empirical studies increased substantially over time, with open access and open data representing major shares of the literature in later years. The main replication challenge was not statistical but procedural: the multi-label *Action* field required careful normalisation to avoid the accidental loss of low-frequency categories.
+
+## Limitations
+
+Several limitations were noted:
+
+- The replication relied on consistent parsing of the *Action* field, which may contain formatting differences across dataset versions.
+- The reference figure included stylistic choices (fonts, legend layout, and spacing) that could not be matched exactly without using the original plotting theme settings.
+- Minor differences in bar widths, axis expansion, and legend rendering were expected due to different default plotting environments.
+
+## Conclusion
+
+Figure 2 from @lasser2022maposr was replicated using a transparent R/Quarto workflow. The final figure reproduced the main trend and subfield composition, and a missing subfield segment (*open science*) was restored through label standardisation and completion of year--subfield combinations.
+
+## References
+
+::: {#refs}
+:::
+
+## Appendix A: Key code used in the replication
+
+### Data loading script (`01_load_data.R`)
+
+```{r}
+cat(readLines("scripts/01_load_data.R"), sep="\n")
+```
+
+### Cleaning and figure replication script (`Figure2_clean_data.R`)
+
+```{r}
+cat(readLines("scripts/Figure2_clean_data.R"), sep="\n")
+```
+
+## Appendix B: Replication presentation output
+
+The rendered replication slides (PDF) were included as a supplementary deliverable:
+
+- `presentation/MapOSR_Figure2_replication.pdf`
